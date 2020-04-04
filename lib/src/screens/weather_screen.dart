@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_weather/main.dart';
-import 'package:flutter_weather/src/api/weather_api_client.dart';
-import 'package:flutter_weather/src/bloc/weather_bloc.dart';
-import 'package:flutter_weather/src/bloc/weather_event.dart';
-import 'package:flutter_weather/src/bloc/weather_state.dart';
-import 'package:flutter_weather/src/repository/weather_repository.dart';
-import 'package:flutter_weather/src/api/api_keys.dart';
+import '../../main.dart';
+import '../api/weather_api_client.dart';
+import '../bloc/weather_bloc.dart';
+import '../bloc/weather_event.dart';
+import '../bloc/weather_state.dart';
+import '../repository/weather_repository.dart';
+import '../api/api_keys.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_weather/src/widgets/weather_widget.dart';
+import '../widgets/weather_widget.dart';
 import 'package:http/http.dart' as http;
 import 'package:intl/intl.dart';
 import 'package:geolocator/geolocator.dart';
@@ -26,7 +26,7 @@ class WeatherScreen extends StatefulWidget {
 class _WeatherScreenState extends State<WeatherScreen>
     with TickerProviderStateMixin {
   WeatherBloc _weatherBloc;
-  String _cityName = 'bengaluru';
+  String _cityName = 'Kolkata';
   AnimationController _fadeController;
   Animation<double> _fadeAnimation;
 
@@ -73,11 +73,11 @@ class _WeatherScreenState extends State<WeatherScreen>
                 itemBuilder: (context) => <PopupMenuEntry<OptionsMenu>>[
                       PopupMenuItem<OptionsMenu>(
                         value: OptionsMenu.changeCity,
-                        child: Text("change city"),
+                        child: Text("Change City"),
                       ),
                       PopupMenuItem<OptionsMenu>(
                         value: OptionsMenu.settings,
-                        child: Text("settings"),
+                        child: Text("Settings"),
                       ),
                     ])
           ],
@@ -161,11 +161,11 @@ class _WeatherScreenState extends State<WeatherScreen>
         builder: (BuildContext context) {
           return AlertDialog(
             backgroundColor: Colors.white,
-            title: Text('Change city', style: TextStyle(color: Colors.black)),
+            title: Text('Change City', style: TextStyle(color: Colors.black)),
             actions: <Widget>[
               FlatButton(
                 child: Text(
-                  'ok',
+                  'OK',
                   style: TextStyle(color: Colors.black, fontSize: 16),
                 ),
                 onPressed: () {
@@ -225,7 +225,7 @@ class _WeatherScreenState extends State<WeatherScreen>
     switch (permissionResult[PermissionGroup.locationWhenInUse]) {
       case PermissionStatus.denied:
       case PermissionStatus.unknown:
-        print('location permission denied');
+        print('Location permission denied');
         _showLocationDeniedDialog(permissionHandler);
         throw Error();
     }

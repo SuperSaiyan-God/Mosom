@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_weather/main.dart';
-import 'package:flutter_weather/src/model/weather.dart';
-import 'package:flutter_weather/src/widgets/value_tile.dart';
+import '../../main.dart';
+import '../model/weather.dart';
+import '../widgets/value_tile.dart';
 
 /// Renders Weather Icon, current, min and max temperatures
 class CurrentConditions extends StatelessWidget {

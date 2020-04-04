@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_weather/main.dart';
-import 'package:flutter_weather/src/model/weather.dart';
-import 'package:flutter_weather/src/widgets/value_tile.dart';
+import '../../main.dart';
+import '../model/weather.dart';
+import '../widgets/value_tile.dart';
 import 'package:intl/intl.dart';
 
 /// Renders a horizontal scrolling list of weather conditions
@@ -24,9 +24,9 @@ class ForecastHorizontal extends StatelessWidget {
         shrinkWrap: true,
         itemCount: this.weathers.length,
         separatorBuilder: (context, index) => Divider(
-              height: 100,
-              color: Colors.white,
-            ),
+          height: 100,
+          color: Colors.white,
+        ),
         padding: EdgeInsets.only(left: 10, right: 10),
         itemBuilder: (context, index) {
           final item = this.weathers[index];

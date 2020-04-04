@@ -1,6 +1,6 @@
 import 'dart:convert';
-import 'package:flutter_weather/src/api/http_exception.dart';
-import 'package:flutter_weather/src/model/weather.dart';
+import '../api/http_exception.dart';
+import '../model/weather.dart';
 import 'package:meta/meta.dart';
 import 'package:http/http.dart' as http;
 

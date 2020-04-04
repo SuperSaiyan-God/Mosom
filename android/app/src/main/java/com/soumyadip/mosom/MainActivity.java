@@ -1,4 +1,4 @@
-package com.ananthu.flutter_weather;
+package com.soumyadip.mosom;
 
 import android.os.Bundle;
 import io.flutter.app.FlutterActivity;

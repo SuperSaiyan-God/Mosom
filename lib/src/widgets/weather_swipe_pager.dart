@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_swiper/flutter_swiper.dart';
-import 'package:flutter_weather/main.dart';
-import 'package:flutter_weather/src/model/weather.dart';
-import 'package:flutter_weather/src/widgets/current_conditions.dart';
-import 'package:flutter_weather/src/widgets/empty_widget.dart';
-import 'package:flutter_weather/src/widgets/temperature_line_chart.dart';
+import '../../main.dart';
+import '../model/weather.dart';
+import '../widgets/current_conditions.dart';
+import '../widgets/empty_widget.dart';
+import '../widgets/temperature_line_chart.dart';
 
 class WeatherSwipePager extends StatelessWidget {
   const WeatherSwipePager({
@@ -44,8 +44,7 @@ class WeatherSwipePager extends StatelessWidget {
                     .theme
                     .accentColor
                     .withOpacity(0.4),
-                activeColor:
-                AppStateContainer.of(context).theme.accentColor)),
+                activeColor: AppStateContainer.of(context).theme.accentColor)),
       ),
     );
   }

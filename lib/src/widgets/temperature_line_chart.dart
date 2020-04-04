@@ -1,13 +1,12 @@
 import 'package:charts_flutter/flutter.dart' as charts;
 import 'package:flutter/material.dart';
-import 'package:flutter_weather/main.dart';
-import 'package:flutter_weather/src/model/weather.dart';
+import '../../main.dart';
+import '../model/weather.dart';
 
 /// Renders a line chart from forecast data
 /// x axis - date
 /// y axis - temperature
 class TemperatureLineChart extends StatelessWidget {
-
   final List<Weather> weathers;
   final bool animate;
 
@@ -20,13 +19,11 @@ class TemperatureLineChart extends StatelessWidget {
         child: charts.TimeSeriesChart([
           new charts.Series<Weather, DateTime>(
             id: 'Temperature',
-            colorFn: (_, __) =>
-            charts.MaterialPalette.blue.shadeDefault,
+            colorFn: (_, __) => charts.MaterialPalette.blue.shadeDefault,
             domainFn: (Weather weather, _) =>
-                DateTime.fromMillisecondsSinceEpoch(
-                    weather.time * 1000),
-            measureFn: (Weather weather, _) =>
-                weather.temperature.as(AppStateContainer.of(context).temperatureUnit),
+                DateTime.fromMillisecondsSinceEpoch(weather.time * 1000),
+            measureFn: (Weather weather, _) => weather.temperature
+                .as(AppStateContainer.of(context).temperatureUnit),
             data: weathers,
           )
         ],

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_weather/main.dart';
-import 'package:flutter_weather/src/themes.dart';
-import 'package:flutter_weather/src/utils/converters.dart';
+import '../../main.dart';
+import '../themes.dart';
+import '../utils/converters.dart';
 
 class SettingsScreen extends StatelessWidget {
   @override

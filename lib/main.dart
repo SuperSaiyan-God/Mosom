@@ -1,20 +1,16 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_weather/src/screens/routes.dart';
-import 'package:flutter_weather/src/screens/weather_screen.dart';
+import 'src/screens/routes.dart';
+import 'src/screens/weather_screen.dart';
 import 'package:bloc/bloc.dart';
-import 'package:flutter_weather/src/themes.dart';
-import 'package:flutter_weather/src/utils/constants.dart';
-import 'package:flutter_weather/src/utils/converters.dart';
+import 'src/themes.dart';
+import 'src/utils/constants.dart';
+import 'src/utils/converters.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-
 
 void main() {
   BlocSupervisor().delegate = SimpleBlocDelegate();
   runApp(AppStateContainer(child: WeatherApp()));
 }
-
-
-// Coded By Raj Chowdhury
 
 class SimpleBlocDelegate extends BlocDelegate {
   @override
@@ -24,12 +20,11 @@ class SimpleBlocDelegate extends BlocDelegate {
   }
 }
 
-
 class WeatherApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Weather App',
+      title: 'Mosom',
       theme: AppStateContainer.of(context).theme,
       home: WeatherScreen(),
       routes: Routes.mainRoute,
@@ -38,10 +33,6 @@ class WeatherApp extends StatelessWidget {
 }
 
 /// top level widget to hold application state
-
-
-
-
 
 /// state is passed down with an inherited widget
 
@@ -64,7 +55,6 @@ class _AppStateContainerState extends State<AppStateContainer> {
   ThemeData _theme = Themes.getTheme(Themes.DARK_THEME_CODE);
   int themeCode = Themes.DARK_THEME_CODE;
   TemperatureUnit temperatureUnit = TemperatureUnit.celsius;
-
 
   @override
   initState() {

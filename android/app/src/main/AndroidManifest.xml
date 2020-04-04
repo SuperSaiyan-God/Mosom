@@ -1,5 +1,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.ananthu.flutter_weather">
+    package="com.soumyadip.mosom">
 
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
 
@@ -10,7 +10,7 @@
          FlutterApplication and put your custom class here. -->
     <application
         android:name="io.flutter.app.FlutterApplication"
-        android:label="flutter_weather"
+        android:label="mosom"
         android:icon="@mipmap/ic_launcher">
         <activity
             android:name=".MainActivity"
