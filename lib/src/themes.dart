@@ -26,7 +26,7 @@ class Themes {
 
   static final _light = ThemeData(
     primarySwatch: MaterialColor(
-      Colors.white.value,
+      Colors.pink.value,
       const <int, Color>{
         50: Colors.white10,
         100: Colors.white12,
@@ -40,7 +40,7 @@ class Themes {
         900: Colors.white70,
       },
     ),
-    accentColor: Colors.black,
+    accentColor: Colors.white,
       disabledColor: Colors.green
 
   );
