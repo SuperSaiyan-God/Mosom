@@ -2,10 +2,6 @@ import 'package:flutter/material.dart';
 import '../../main.dart';
 import '../widgets/empty_widget.dart';
 
-/// General utility widget used to render a cell divided into three rows
-/// First row displays label
-/// second row displays iconData
-/// third row displays value
 class ValueTile extends StatelessWidget {
   final String label;
   final String value;

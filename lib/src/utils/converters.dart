@@ -1,6 +1,3 @@
-/// converts values of type int to double
-/// intended to use while parsing json values where type will be dynamic
-/// returns value of type double
 intToDouble(dynamic val) {
   if (val.runtimeType == double) {
     return val;
