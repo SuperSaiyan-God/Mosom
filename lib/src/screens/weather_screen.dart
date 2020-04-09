@@ -58,7 +58,7 @@ class _WeatherScreenState extends State<WeatherScreen>
                     color: AppStateContainer.of(context)
                         .theme
                         .accentColor
-                        .withAlpha(80),
+                        .withAlpha(100),
                     fontSize: 14),
               )
             ],
