@@ -87,7 +87,13 @@ class _WeatherScreenState extends State<WeatherScreen>
           child: Container(
             constraints: BoxConstraints.expand(),
             decoration: BoxDecoration(
-                color: AppStateContainer.of(context).theme.primaryColor),
+                gradient: LinearGradient(
+                    begin: Alignment.topCenter,
+                    end: Alignment.bottomCenter,
+                    colors: [
+                  AppStateContainer.of(context).theme.primaryColor,
+                  Color(0xFF240b36)
+                ])),
             child: FadeTransition(
               opacity: _fadeAnimation,
               child: BlocBuilder(
