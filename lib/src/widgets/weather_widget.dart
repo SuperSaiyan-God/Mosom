@@ -40,7 +40,7 @@ class WeatherWidget extends StatelessWidget {
           Padding(
             child: Divider(
               color:
-                  AppStateContainer.of(context).theme.accentColor.withAlpha(50),
+                  AppStateContainer.of(context).theme.accentColor.withAlpha(60),
             ),
             padding: EdgeInsets.all(10),
           ),
@@ -48,7 +48,7 @@ class WeatherWidget extends StatelessWidget {
           Padding(
             child: Divider(
               color:
-                  AppStateContainer.of(context).theme.accentColor.withAlpha(50),
+                  AppStateContainer.of(context).theme.accentColor.withAlpha(60),
             ),
             padding: EdgeInsets.all(10),
           ),
@@ -79,7 +79,7 @@ class WeatherWidget extends StatelessWidget {
                 color: AppStateContainer.of(context)
                     .theme
                     .accentColor
-                    .withAlpha(50),
+                    .withAlpha(60),
               )),
             ),
             ValueTile(
@@ -95,7 +95,7 @@ class WeatherWidget extends StatelessWidget {
                 color: AppStateContainer.of(context)
                     .theme
                     .accentColor
-                    .withAlpha(50),
+                    .withAlpha(60),
               )),
             ),
             ValueTile("Humidity", '${this.weather.humidity}%'),

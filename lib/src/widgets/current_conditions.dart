@@ -29,19 +29,20 @@ class CurrentConditions extends StatelessWidget {
               color: AppStateContainer.of(context).theme.accentColor),
         ),
         Row(mainAxisAlignment: MainAxisAlignment.center, children: <Widget>[
-          ValueTile("max",
+          ValueTile("Max",
               '${this.weather.maxTemperature.as(AppStateContainer.of(context).temperatureUnit).round()}°'),
           Padding(
             padding: const EdgeInsets.only(left: 15, right: 15),
             child: Center(
                 child: Container(
-              width: 1,
-              height: 30,
-              color:
-                  AppStateContainer.of(context).theme.accentColor.withAlpha(50),
-            )),
+                    width: 1,
+                    height: 30,
+                    color: AppStateContainer.of(context)
+                        .theme
+                        .accentColor
+                        .withAlpha(60))),
           ),
-          ValueTile("min",
+          ValueTile("Min",
               '${this.weather.minTemperature.as(AppStateContainer.of(context).temperatureUnit).round()}°'),
         ]),
       ],

@@ -19,7 +19,7 @@ class TemperatureLineChart extends StatelessWidget {
         child: charts.TimeSeriesChart([
           new charts.Series<Weather, DateTime>(
             id: 'Temperature',
-            colorFn: (_, __) => charts.MaterialPalette.blue.shadeDefault,
+            colorFn: (_, __) => charts.MaterialPalette.green.shadeDefault,
             domainFn: (Weather weather, _) =>
                 DateTime.fromMillisecondsSinceEpoch(weather.time * 1000),
             measureFn: (Weather weather, _) => weather.temperature
