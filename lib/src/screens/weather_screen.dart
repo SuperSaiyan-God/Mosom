@@ -82,7 +82,7 @@ class _WeatherScreenState extends State<WeatherScreen>
                     ])
           ],
         ),
-        backgroundColor: Colors.white,
+        backgroundColor: Color(0xFFcc2b5e),
         body: Material(
           child: Container(
             constraints: BoxConstraints.expand(),

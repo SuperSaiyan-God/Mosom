@@ -41,12 +41,12 @@ class SettingsScreen extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: <Widget>[
                   Text(
-                    "Dark",
+                    "Red",
                     style: TextStyle(
                         color: AppStateContainer.of(context).theme.accentColor),
                   ),
                   Radio(
-                    value: Themes.DARK_THEME_CODE,
+                    value: Themes.RED_THEME_CODE,
                     groupValue: AppStateContainer.of(context).themeCode,
                     onChanged: (value) {
                       AppStateContainer.of(context).updateTheme(value);
@@ -76,12 +76,12 @@ class SettingsScreen extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: <Widget>[
                   Text(
-                    "Light",
+                    "Blue",
                     style: TextStyle(
                         color: AppStateContainer.of(context).theme.accentColor),
                   ),
                   Radio(
-                    value: Themes.LIGHT_THEME_CODE,
+                    value: Themes.BLUE_THEME_CODE,
                     groupValue: AppStateContainer.of(context).themeCode,
                     onChanged: (value) {
                       AppStateContainer.of(context).updateTheme(value);
