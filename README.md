@@ -1,4 +1,4 @@
-# Mosom : A beautiful weather forecast app
+# Wiz : A beautiful weather forecast app
 
 A Weather Forecast app built with Flutter.
 [![Google Play](screenshots/download.svg)](https://play.google.com/store/apps/details?id=com.soumyadip.mosom)
